@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search – AquaCart</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">AquaCart</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container search">
+    <h2>Search Products</h2>
+    <input type="text" id="searchInput" placeholder="Search here..." style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;" />
+    <div id="searchResults" class="grid" style="margin-top:2rem;"></div>
+  </section>
+
+  <footer class="footer"><p>© 2025 AquaCart | Designed by Hamsica KS</p></footer>
+  <button id="scrollTop">⬆</button>
+  <script src="script.js"></script>
+  <script>
+    const products=[
+      {name:'Water Bottle',price:15,img:'assets/images/p1.jpg'},
+      {name:'Beach Hat',price:20,img:'assets/images/p2.jpg'},
+      {name:'Blue T-Shirt',price:25,img:'assets/images/p3.jpg'}
+    ];
+    const searchInput=document.getElementById('searchInput');
+    const results=document.getElementById('searchResults');
+
+    searchInput.addEventListener('input',()=>{
+      const term=searchInput.value.toLowerCase();
+      results.innerHTML='';
+      const filtered=products.filter(p=>p.name.toLowerCase().includes(term));
+      if(filtered.length===0){results.innerHTML='<p>No products found.</p>';return;}
+      filtered.forEach(p=>{
+        const card=document.createElement('div');
+        card.className='card';
+        card.innerHTML=`<img src="${p.img}" alt=""><h3>${p.name}</h3><p>$${p.price}</p>`;
+        results.appendChild(card);
+      });
+    });
+  </script>
+</body>
+</html>

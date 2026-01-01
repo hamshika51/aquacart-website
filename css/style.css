@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background: linear-gradient(180deg, #e0f7fa, #ffffff);
+}
+
+/* Navbar */
+.navbar {
+  background: #00bcd4;
+  color: white;
+  padding: 1rem 0;
+}
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+.navbar a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.navbar a:hover {
+  color: #004d60;
+}
+
+/* Hero Section */
+.hero {
+  background: url('../assets/images/water-bg.jpg') center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+.hero-text {
+  background: rgba(0,0,0,0.4);
+  padding: 2rem;
+  border-radius: 12px;
+}
+.btn {
+  display: inline-block;
+  background: #00bcd4;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+.btn:hover { background: #0097a7; }
+
+/* Grid sections */
+.container { width: 90%; margin: auto; padding: 3rem 0; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform .3s ease;
+}
+.card:hover { transform: scale(1.05); }
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Features */
+.features {
+  background: #0097a7;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+.features .grid div {
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+/* Footer */
+.footer {
+  background: #00bcd4;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Scroll top button */
+#scrollTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: none;
+}
+#scrollTop:hover { background: #0097a7; }

@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product View - AquaCart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">AquaCart</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html">🛒</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="container product-view">
+    <div class="grid">
+      <img src="p1.jpg" alt="" style="border-radius:12px;max-width:400px;">
+      <div>
+        <h2>Water Bottle</h2>
+        <p>Stay hydrated with our premium aqua bottle, designed for everyday use.</p>
+        <p><b>Price:</b> $15</p>
+        <p>⭐⭐⭐⭐☆ (4.5/5)</p>
+        <button class="btn" onclick="addToCart('Water Bottle')">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 AquaCart | Designed by Hamsica KS</p>
+  </footer>
+  <button id="scrollTop">⬆</button>
+  <script src="script.js"></script>
+</body>
+</html>
